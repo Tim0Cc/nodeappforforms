@@ -10,7 +10,7 @@
 <body>
   
   <h1>Let's get the forms working</h1>
-  <form action="" id="new-seminar">
+  <form action="" id="new-seminar" onsubmit="handleSubmit()">
     <label for="title">Titel:</label>
     <input type="text" name="titel" id="title" value="geben Sie hier den Titel des Seminars ein">
     <br>
@@ -36,5 +36,20 @@
     <br>
     <input type="submit" id="submitter">
   </form>
+  <script>
+    // query html elements
+    const title = document.getElementById('title');
+    const description = document.getElementById('description');
+    const vortrag = document.getElementById('vortrag');
+    const workshop = document.getElementById('workshop');
+    const datum = document.getElementById('datum');
+    const zeit = document.getElementById('zeit');
+    const submitInput = document.getElementById('submitter');
+    // handle submit event
+    function handleSubmit() {
+      console.log(title.value);
+    };
+    // submitInput.addEventListener('click', handleSubmit());
+  </script>
 </body>
 </html>
