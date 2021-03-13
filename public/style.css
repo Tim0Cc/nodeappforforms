@@ -9,11 +9,17 @@ input[type=text] {
 
 input[type=date], input[type=time], input[type=submit] {
   padding: 8px 20px;
+  background-color: #A1A1A1;
+  color: white;
 }
 
 input[type=text], input[type=date], input[type=time] {
   margin: 8px 0;
   box-sizing: border-box;
   border: 2px solid #AAA;
+}
+
+input[type=text], input[type=date], input[type=time], input[type=submit]
+{
   border-radius: 4px;
 }
