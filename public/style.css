@@ -1,0 +1,19 @@
+body {
+  background-color: #EEE
+}
+
+input[type=text] { 
+  width: 100%;
+  padding: 12px 20px;
+}
+
+input[type=date], input[type=time], input[type=submit] {
+  padding: 8px 20px;
+}
+
+input[type=text], input[type=date], input[type=time] {
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid #AAA;
+  border-radius: 4px;
+}
