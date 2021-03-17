@@ -9,7 +9,7 @@ app.use(express.json({limit: '100kb'}));
 app.post('/form-data', (req, res) => {
   console.log(req.body);
 
-  // res.json({
-  //   status: 'success'
-  // });
+  res.json({
+    status: 'success'
+  });
 });
