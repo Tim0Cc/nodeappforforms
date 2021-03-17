@@ -10,7 +10,7 @@
 <body>
   
   <h1>Let's get the forms working</h1>
-  <form action="" id="seminar-form">
+  <form action="#" id="seminar-form">
     <label for="title">Titel:</label>
     <input type="text" name="titel" id="title" value="geben Sie hier den Titel des Seminars ein">
     <br>
@@ -36,12 +36,12 @@
     <br>
     <!-- <input type="submit" id="submitter">
     <input type="reset" id="resetter"> -->
-    <button id="submitter">absenden/speichern</button>
-    <button id="resetter">abbrechen</button>
+    <button id="submitter">absenden / speichern</button>
+    <button id="resetter">abbrechen / reset</button>
   </form>
   <script>
     // query html elements
-    // const title = document.getElementById('title');
+    const title = document.getElementById('title');
     // const description = document.getElementById('description');
     // const vortrag = document.getElementById('vortrag');
     // const workshop = document.getElementById('workshop');
@@ -54,8 +54,26 @@
     const handleSubmit = function(e) {
       e.preventDefault();
       console.log('function  const handleSubmit is running');
+      let valid = validate();
+
+      if (valid) {
+        seminarForm.submit();
+      } else {
+        console.log('some error occured')
+      }
       console.log(title.value);
     }
+      
+    const validate = function(e) {
+      console.log('i am validating')
+      let isvalid = true;
+      if (title == "ha") {
+      isvalid = false;
+    }
+
+    return isvalid;
+    } 
+
     const handleReset = function(e) {
       e.preventDefault();
       console.log('function  const handleReset is running');
