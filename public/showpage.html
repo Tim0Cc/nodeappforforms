@@ -8,12 +8,25 @@
 </head>
 <body>
   <h1>SHOWPAGE</h1>
+  <div class="comin">
+    <h2>comin</h2>
+  </div>
+  <div class="past">
+    <h2>past</h2>
+  </div>
   <script>
     getData();
     async function getData() {
       const response = await fetch('/showpage');
-      const data = await response.json();
-      console.log(data[0]);
+      const rawData = await response.json();
+
+      const data = rawData.sort( function(a,b) {
+        return new Date(b.datum) - new Date(a.datum);
+      });
+
+      const comin = document.querySelector('.comin');
+      const past = document.querySelector('.past');
+      
 
       for (item of data) {
 
@@ -32,9 +45,14 @@
         zeit.textContent = item.zeit;
         datum.textContent = item.datum;
         
-
         root.append(title, description, art, zeit, datum);
-        document.body.append(root);
+
+        let now = new Date()
+        if (now < new Date(item.datum)) {
+          comin.append(root);
+        } else {
+          past.append(root);
+        }
       }
       console.log(data);
     }
