@@ -13,6 +13,30 @@
     async function getData() {
       const response = await fetch('/showpage');
       const data = await response.json();
+      console.log(data[0]);
+
+      for (item of data) {
+
+        const root = document.createElement('div');
+        root.style = "margin:20px;";
+
+        const title = document.createElement('div');
+        const description = document.createElement('div');
+        const art = document.createElement('div');
+        const zeit = document.createElement('div');
+        const datum = document.createElement('div');
+
+        title.textContent = item.title;
+        description.textContent = item.description;
+        art.textContent = item.art;
+        zeit.textContent = item.zeit;
+        datum.textContent = item.datum;
+        
+
+        root.append(title, description, art, zeit, datum);
+        document.body.append(root);
+      }
+      console.log(data);
     }
   </script>
 </body>
