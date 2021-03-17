@@ -7,7 +7,7 @@ input[type=text] {
   padding: 12px 20px;
 }
 
-input[type=date], input[type=time], input[type=submit] {
+input[type=date], input[type=time], input[type=submit], #submitter, #resetter {
   padding: 8px 20px;
   background-color: #A1A1A1;
   color: white;
@@ -19,13 +19,13 @@ input[type=text], input[type=date], input[type=time] {
   border: 2px solid #AAA;
 }
 
-input[type=text], input[type=date], input[type=time], input[type=submit]
+input[type=text], input[type=date], input[type=time], input[type=submit], #submitter, #resetter
 {
   border-radius: 4px;
   outline: none;
 }
 
-input[type=text]:focus, input[type=date]:focus, input[type=time]:focus, input[type=submit]:focus
+input[type=text]:focus, input[type=date]:focus, input[type=time]:focus, input[type=submit]:focus, #submitter:focus, #resetter:focus
 {
   background-color: #101010;
   border: 3px solid #BADA55;
