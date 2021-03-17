@@ -35,6 +35,7 @@
     <p>___</p>
     <br>
     <input type="submit" id="submitter">
+    <input type="reset" id="reset">
   </form>
   <script>
     // query html elements
@@ -46,7 +47,7 @@
     // const zeit = document.getElementById('zeit');
     const submitInput = document.getElementById('submitter');
     // handle submit event
-    function handleSubmit(e) {
+    const handleSubmit = function(e) {
       e.preventDefault();
       console.log('function handleSubmit() is running');
       console.log(title.value);
