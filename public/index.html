@@ -10,7 +10,7 @@
 <body>
   
   <h1>Let's get the forms working</h1>
-  <form action="" id="seminar-form">
+  <form action="/showpage" id="seminar-form">
     <label for="title">Titel:</label>
     <input type="text" name="titel" id="title" value="geben Sie hier den Titel des Seminars ein">
     <br>
@@ -65,7 +65,7 @@
       resetButton.addEventListener('click', handleReset);
       
       submitButton.addEventListener('click', async event => {
-        event.preventDefault();
+        // event.preventDefault();
         console.log('function  const handleSubmit is running');
 
         const radio = document.querySelector('input[name="art"]:checked');

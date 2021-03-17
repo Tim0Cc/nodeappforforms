@@ -14,10 +14,20 @@ app.post('/form-data', (req, res) => {
   const data = req.body;
   const timestamp = Date.now();
   data.timestamp = timestamp;
-  
+
   db.insert(data);
 
   res.json({
     status: 'success'
   });
+});
+
+app.get('/showpage', (req, res) => {
+  database.find({}, (err, data) => {
+    if (err) {
+      res.end();
+      return;
+    }
+    res.json(data);
+  })
 });
