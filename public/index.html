@@ -42,12 +42,12 @@
   <script>
     // query html elements
     const title = document.getElementById('title');
-    // const description = document.getElementById('description');
-    // const vortrag = document.getElementById('vortrag');
-    // const workshop = document.getElementById('workshop');
-    // const datum = document.getElementById('datum');
-    // const zeit = document.getElementById('zeit');
-    
+    const description = document.getElementById('description');
+    const vortrag = document.getElementById('vortrag');
+    const workshop = document.getElementById('workshop');
+    const datum = document.getElementById('datum');
+    const zeit = document.getElementById('zeit');
+
     const seminarForm = document.getElementById('seminar-form')
     const submitButton = document.getElementById('submitter');
     const resetButton = document.getElementById('resetter');
@@ -55,7 +55,19 @@
     const handleSubmit = function(e) {
       e.preventDefault();
       console.log('function  const handleSubmit is running');
-      console.log(title.value);
+      // console.log(title.value);
+      const radio = document.querySelector('input[name="art"]:checked');
+      console.log(radio);
+
+      // back to app.js
+      const data = { 
+        title: title.value, 
+        description: description.value,
+        art: radio.value,
+        datum: datum.value,
+        zeit: zeit.value
+      };
+      console.log(data);
     } 
 
     const handleReset = function(e) {
