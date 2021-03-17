@@ -12,6 +12,9 @@ db.loadDatabase();
 app.post('/form-data', (req, res) => {
   console.log(req.body);
   const data = req.body;
+  const timestamp = Date.now();
+  data.timestamp = timestamp;
+  
   db.insert(data);
 
   res.json({
