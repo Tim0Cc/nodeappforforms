@@ -23,7 +23,7 @@ app.post('/form-data', (req, res) => {
 });
 
 app.get('/showpage', (req, res) => {
-  database.find({}, (err, data) => {
+  db.find({}, (err, data) => {
     if (err) {
       res.end();
       return;

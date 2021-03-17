@@ -11,8 +11,8 @@
   <script>
     getData();
     async function getData() {
-      const respnse = await fetch('/showpage');
-      
+      const response = await fetch('/showpage');
+      const data = await response.json();
     }
   </script>
 </body>
