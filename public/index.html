@@ -47,31 +47,15 @@
     // const workshop = document.getElementById('workshop');
     // const datum = document.getElementById('datum');
     // const zeit = document.getElementById('zeit');
+    
     const seminarForm = document.getElementById('seminar-form')
     const submitButton = document.getElementById('submitter');
     const resetButton = document.getElementById('resetter');
-    // handle submit event
+
     const handleSubmit = function(e) {
       e.preventDefault();
       console.log('function  const handleSubmit is running');
-      let valid = validate();
-
-      if (valid) {
-        seminarForm.submit();
-      } else {
-        console.log('some error occured')
-      }
       console.log(title.value);
-    }
-      
-    const validate = function(e) {
-      console.log('i am validating')
-      let isvalid = true;
-      if (title == "ha") {
-      isvalid = false;
-    }
-
-    return isvalid;
     } 
 
     const handleReset = function(e) {
